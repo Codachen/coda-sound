@@ -2,9 +2,21 @@
     <div>
         <loading :active.sync="isLoading"></loading>
         <Navbar></Navbar>
-        <div class="jumbotron  d-flex align-items-end">
-        <h1 class="display-4 ml-5">服務項目</h1>
+         <section class="cid-qz32r7TSo5" id="content7-93" data-rv-view="3316">
+    <div class="about">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-6 col-md-8 align-center">
+                 <h3 class="mbr-section-subtitle align-center mbr-fonts-style mbr-light pb-3 display-5">
+                    CODA Sound
+                </h3>
+                <h1 class="mbr-section-title align-center mbr-fonts-style mbr-bold display-2">
+                    PRODUCTS</h1>
+            </div>
         </div>
+    </div>
+    </div>
+</section>
 
     <div class="container pt-5">
     <div class="row">
@@ -204,13 +216,21 @@ export default {
 </script>
 
 <style scoped>
-    .jumbotron{
-    background-image: url(https://images.unsplash.com/photo-1602137933189-d119b2c45c26?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2711&q=80);
+.about{
+    margin-bottom: 5px;
+    margin-top: -50px;
+    background-image: url(https://raw.githubusercontent.com/Codachen/codachen.github.io/main/assets/img/d.jpg);
     background-size: cover;
-    background-position: center center;
-    min-height:350px;
+    background-position: 0% 25%;
+    background-attachment: fixed;
+    min-height:700px;
     color:white;
-    border:none;
+}
+.about H1{
+  font-weight:700;
+}
+.about H3{
+  margin-top: 300px;
 }
 .active{
     background-color: #5B5B5B;

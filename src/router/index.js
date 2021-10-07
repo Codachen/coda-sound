@@ -2,19 +2,19 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 
-import Login from '@/components/backed/Login';
-import Dashboard from '@/components/backed/Dashboard';
+import Login from '@/components/admin/Login';
+import Dashboard from '@/components/admin/Dashboard';
 import Products from '@/components/pages/Products';
-import Main from '@/components/Front/Main';
-import AboutUs from '@/components/Front/AboutUs';
-import Traffic from '@/components/Front/Traffic';
-import Server from '@/components/Front/Server';
+import Main from '@/components/customer/Main';
+import Brand from '@/components/customer/Brand';
+import Location from '@/components/customer/Location';
+import Product from '@/components/customer/Product';
 import CustomerOrder from '@/components/pages/CustomerOrder';
 import Coupon from '@/components/pages/Coupon';
 import CustomerCheckout from '@/components/pages/CustomerCheckout';
-import Order from '@/components/Front/Order';
-import Checkout from '@/components/Front/Checkout';
-import Welcome from '@/components/Front/Welcome';
+import Order from '@/components/customer/Order';
+import Checkout from '@/components/customer/Checkout';
+import Welcome from '@/components/customer/Welcome';
 Vue.use(VueRouter);
 
 export default new VueRouter({
@@ -41,19 +41,19 @@ export default new VueRouter({
             ]
         },
         {
-            path:'/about',
-            name:'關於我們',
-            component:AboutUs
+            path:'/brand',
+            name:'品牌故事',
+            component:Brand
         },
         {
-            path:'/server',
-            name:'服務項目',
-            component:Server
+            path:'/product',
+            name:'供應商品',
+            component:Product
         },
         {
-            path:'/traffic',
+            path:'/location',
             name:'交通方式',
-            component:Traffic
+            component:Location
         },
         {
             name:'後台登入',

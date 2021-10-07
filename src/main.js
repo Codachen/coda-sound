@@ -48,6 +48,7 @@ router.beforeEach((to, from, next) => {
     }
 })
   }else{
+    document.documentElement.scrollTop = 0
     next();
   }
   

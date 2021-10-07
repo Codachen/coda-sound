@@ -1,19 +1,19 @@
 <template>
     <div>
         <Navbar></Navbar>
-        <Content></Content>
+        <Home/>
         <Footer></Footer>
     </div>
 </template>
 
 <script>
 import Navbar from './Navbar';
-import Content from './Content';
+import Home from './Home';
 import Footer from './Footer';
 export default {
     components:{
         Navbar,
-        Content,
+        Home,
         Footer
 
     }

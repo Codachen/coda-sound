@@ -1,19 +1,19 @@
 #!/usr/bin/env sh
 
-# 当发生错误时中止脚本
+# 出錯時停止腳本
 set -e
 
-# 构建
+# 指令
 npm run build
 
-# cd 到构建输出的目录下 
+# 切換目錄到輸出資料夾
 cd dist
 
 git init
 git add -A
 git commit -m 'deploy'
 
-# 部署到 https://<USERNAME>.github.io/<REPO>
-git push -f https://github.com/Codachen/tt.git master:gh-pages
+# 部署到https://<USERNAME>.github.io/<REPO> 的gh-pages分支
+git push -f https://github.com/Codachen/coda-sound.git master:gh-pages
 
 cd -

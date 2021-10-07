@@ -7,10 +7,10 @@
         <div class="row justify-content-center">
             <div class="col-12 col-lg-6 col-md-8 align-center">
                  <h3 class="mbr-section-subtitle align-center mbr-fonts-style mbr-light pb-3 display-5">
-                    About us
+                    CODA Sound
                 </h3>
-                <h1 class="mbr-section-title align-center mbr-fonts-style mbr-bold display-2">
-                    CODA Sound</h1>
+                <h1 style="font-wight:bolder" class="mbr-section-title align-center mbr-fonts-style mbr-bold display-2">
+                    BRAND STORY</h1>
             </div>
         </div>
     </div>
@@ -81,53 +81,31 @@
                         </p>
                     </div>
                     <div class="mbr-section-btn pt-3 align-center">
-                         <router-link to="/server" class="nav-link" href="#" tabindex="-1" aria-disabled="true"><a class="btn btn-md btn-primary display-4">VIEW COLLECTION</a></router-link>
+                         <router-link to="/product" class="nav-link" href="#" tabindex="-1" aria-disabled="true"><a class="btn btn-md btn-primary display-4">VIEW COLLECTION</a></router-link>
                     </div>
                 </div>
             </div>
         </div>
     </div>          
 </section>
-      <div id="location" class="find-us" style="padding: 100px;">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <h1 style="padding: 10px;">營業資訊</h1>
+<!-- start -->
+<div class="container marketing" style="padding-top: 100px;">
+
+            <div class="row featurette" v-for="(intro,i) in intros" :key=i style="padding-bottom: 150px;">
+            <div class="col-sm-6" :class="{'order-md-2': i%2==0 }">
+                <h3 class="featurette-heading">{{intro.title1}}</h3>
+                <h4 class="text-muted">{{intro.title2}}</h4>
+                <p class="lead">{{intro.text}}</p>
             </div>
-          </div>
-          <div class="col-md-8">
-<!-- How to change your own map point
-	1. Go to Google Maps
-	2. Click on your location point
-	3. Click "Share" and choose "Embed map" tab
-	4. Copy only URL and paste it within the src="" field below
--->
-            <div id="map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.016173632707!2d121.56166261484171!3d25.03352518397251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6da80a7ad%3A0xacc4d11dc963103c!2z5Y-w5YyXMTAx!5e0!3m2!1szh-TW!2stw!4v1633360279338!5m2!1szh-TW!2stw" width="100%" height="330px" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="col-sm-6">
+                    <img :src="intro.img" class="cphoto" style="border-radius: 150px;">
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="left-content">
-              <h1 style="padding: 10px;">CODA Sound</h1>
-              <p>地　　址：110台北市信義區信義路五段7號</p>
-              <p>聯絡電話：02-8101-8800</p>
-              <p>營業時間：周二至周日 11:00-21:30 （周一公休)</p>
-              <ul class="social-icons">
-                <li style="padding: 10px;"><h5>搭乘捷運</h5>
-                </li>信義線：台北101站，4 號出口<br>
-                     板南線：市政府站，2 號出口步行約 10 分鐘
-                <li style="padding: 10px;"><h5>搭乘公車</h5>
-                </li>搭乘至市府站、世貿站、信義行政中心、君悅飯店路線之公車，均可到達台北101停車站下車。
-              </ul>
+    
+            <hr class="featurette-divider">
             </div>
-          </div>
         </div>
-      </div>
-    </div>
+<!-- end -->
       <Footer></Footer>
-      <!-- <script type="application/javascript" defer src="../../../static/css/jquery.min.js"></script>
-      <script type="application/javascript" defer src="../../../static/css/jquery.viewportchecker.js"></script> -->
     </div>
 </template>
 
@@ -138,6 +116,36 @@ export default {
     components:{
         Navbar,
         Footer
+    },
+    data() {
+      return {
+        intros:[
+          {
+            title1:'追求完美音質',
+            title2:'滿足各式產品需求',
+            text:'CODA Sound提供一應俱全的產品，層次豐富的高低音都能完美呈現。無論是何種需求，你都能在這裡得到滿足。',
+            img:'https://images.unsplash.com/photo-1518972559570-7cc1309f3229?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80'
+          },
+          {
+            title1:'無干擾聆賞空間',
+            title2:'沉浸在純粹聽覺環境',
+            text:'我們提供聆賞空間租借服務，隔絕外界的紛擾雜音，找到最身歷其境的聆聽體驗。',
+            img:'https://images.unsplash.com/photo-1589903308904-1010c2294adc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80'
+          },
+          {
+            title1:'專業維修與保養',
+            title2:'音樂持續不間斷',
+            text:'產品皆經嚴格測試，並且提供專業相關服務。無論是開一整天的視訊會議、與朋友聯絡，或沉浸 在最愛的播放清單，都能讓你樂趣不中斷，持續聆聽。',
+            img:'https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80'
+          },
+          {
+            title1:'兼顧視覺與聽覺',
+            title2:'搭配你的絕佳品味',
+            text:'嚴選耳機皆採用科技感十足的設計，不只外觀前衛時尚，更是展現個人特色的個性單品',
+            img:'https://images.unsplash.com/photo-1614149162883-504ce4d13909?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80'
+          }
+        ]
+      }
     },
 }
 </script>
@@ -153,18 +161,19 @@ export default {
 .about{
     margin-bottom: 5px;
     margin-top: -50px;
-    background-image: url(https://images.unsplash.com/photo-1484704849700-f032a568e944?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80);
+    background-image: url(https://raw.githubusercontent.com/Codachen/codachen.github.io/main/assets/img/b.jpg);
     background-size: cover;
-    background-position: top center;
+    background-position: 0% 40%;
     background-attachment: fixed;
-    min-height:500px;
-    color:white;
+    min-height:700px;
+    color:#ffff;
 }
 .about H1{
   margin-top: px;
+  font-weight:700;
 }
 .about H3{
-  margin-top: 150px;
+  margin-top: 300px;
 }
 
 img{
@@ -186,5 +195,61 @@ img{
 p{
     font-size: 15px;
 }
-    
+
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  .carousel-item {
+    height: 32rem;
+  }
+  .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+  }
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .marketing h2 {
+    font-weight: 400;
+  }
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+  .featurette-divider {
+    margin: 5rem 0; 
+  }
+  .featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+  }
+  @media (min-width: 40em) {
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+  
+    .featurette-heading {
+      font-size: 50px;
+    }
+  }
+  
+  @media (min-width: 62em) {
+    .featurette-heading {
+      margin-top: 7rem;
+    }
+  }
+
+.cphoto{
+    max-width: 100%;
+    background-position: center center;
+    background-size:cover;
+}
 </style>

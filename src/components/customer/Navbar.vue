@@ -8,20 +8,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                <a class="nav-link" href="#"><img src="" alt=""></a>
+                <li class="nav-item">
+                <router-link to="/" class="nav-link" href="#">首頁</router-link>
                 </li>
                 <li class="nav-item">
-                <router-link to="/" class="nav-link" href="#">Home</router-link>
+                <router-link to="/brand" class="nav-link" href="#" tabindex="-1" aria-disabled="true">品牌故事</router-link>
                 </li>
                 <li class="nav-item">
-                <router-link to="/about" class="nav-link" href="#" tabindex="-1" aria-disabled="true">關於我們</router-link>
+                <router-link to="/product" class="nav-link" href="#" tabindex="-1" aria-disabled="true">供應商品</router-link>
                 </li>
                 <li class="nav-item">
-                <router-link to="/server" class="nav-link" href="#" tabindex="-1" aria-disabled="true">服務項目</router-link>
-                </li>
-                <li class="nav-item">
-                <router-link to="/traffic" class="nav-link" href="#" tabindex="-1" aria-disabled="true">交通方式</router-link>
+                <router-link to="/location" class="nav-link" href="#" tabindex="-1" aria-disabled="true">營業資訊</router-link>
                 </li>
             </ul>
             <div class="dropdown ml-auto">
