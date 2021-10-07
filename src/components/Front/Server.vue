@@ -210,9 +210,12 @@ export default {
     background-position: center center;
     min-height:350px;
     color:white;
+    border:none;
 }
 .active{
-    background-color: black;
+    background-color: #5B5B5B;
     color:white;
+    border:none;
+
 }
 </style>

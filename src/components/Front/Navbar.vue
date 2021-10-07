@@ -2,7 +2,7 @@
     <div>
     <header>
         <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-                <img src="@/assets/500cf256-2b0d-4c3a-9b9a-8bb4d7f8869d_200x200.png" style="max-width:40px" alt="">
+            <img src="https://cdn-icons-png.flaticon.com/512/65/65129.png" style="max-width:40px" alt="">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -93,3 +93,22 @@ export default {
   
   }
 </script>
+<style scoped>
+.navbar-nav > .nav-item{
+  font-weight:bold;
+  padding-left:30px;
+  padding-right:30px;
+  margin-left:30px;
+  margin-right:10px;
+  text-align:center;
+  align-items: center;
+  line-height: 25px;
+  border-style: solid; border-width: 0 0 5px 0;
+  border-color:transparent;
+}
+.navbar-nav > .nav-item:hover{
+  border-style: solid; border-width: 0 0 5px 0;
+  border-color: #5B5B5B;
+  text-decoration:none;	
+}
+</style>
