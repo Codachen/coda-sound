@@ -2,7 +2,7 @@
     <div>
       <Navbar></Navbar>
         <div class="jumbotron d-flex align-items-end">
-        <h1 class="display-4 ml-5">結帳頁面</h1>
+        <h1 class="display-4 ml-5">感謝您的購買</h1>
       </div>
         <div class="my-5 row justify-content-center">
   <form class="col-md-6" @submit.prevent="payOrder">
@@ -110,11 +110,11 @@ export default {
 
 <style scoped>
 .jumbotron{
-    background-image: url(https://images.unsplash.com/photo-1539872209618-fb1770aa6ff8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1551&q=80);
-    background-size: cover;
-    background-position: center center;
+    background-image: url(https://images.unsplash.com/photo-1613243555988-441166d4d6fd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80);
+    background-size: 100%;
+    background-position: 40% 70%;
     min-height:350px;
-    color:white;
+    color:black;
 }
   
 </style>

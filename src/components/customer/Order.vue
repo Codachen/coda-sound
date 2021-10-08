@@ -239,9 +239,9 @@ export default {
 
 <style scoped>
 .jumbotron{
-    background-image: url(https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80);
+    background-image: url(https://images.unsplash.com/photo-1626266061368-46a8f578ddd6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80);
     background-size: cover;
-    background-position: top center;
+    background-position: 0% 75%;
     min-height:350px;
     color:white;
 }
