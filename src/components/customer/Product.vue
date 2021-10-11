@@ -109,23 +109,29 @@
               <div class="h4" v-if="product.price">現在只要 {{ product.price }} 元</div>
             </div>
             <select name class="form-control mt-3" v-model="product.num">
+               <option :value="num" disabled selected>--請選擇數量--</option>
               <option :value="num" v-for="num in 5" :key="num">選購 {{num}} {{product.unit}}</option>
             </select>
           </div>
           <div class="modal-footer">
             <div class="text-muted text-nowrap mr-3">
               小計
-              <strong>{{ product.num * product.price }}</strong> 元
+              <strong>{{ product.num * product.price ?  product.num * product.price :0 }}</strong> 元
             </div>
             <button
               type="button"
               class="btn btn-outline-danger"
               @click="addtoCart(product.id, product.num)"
+              v-if="product.num>0"
             >
               <i class="fas fa-spinner fa-spin" v-if="product.id === status.loadingItem"></i>
               <i class="fas fa-cart-plus"></i>
               加到購物車
             </button>
+             <span class="badge rounded-pill bg-warning" v-else >
+              <i v-if="product.id === status.loadingItem"></i>
+              尚未選擇數量
+            </span>
           </div>
         </div>
       </div>
