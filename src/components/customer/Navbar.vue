@@ -2,7 +2,7 @@
     <div>
     <header>
         <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-            <img src="https://cdn-icons-png.flaticon.com/512/65/65129.png" style="max-width:40px" alt="">
+            <img src="https://cdn-icons-png.flaticon.com/512/65/65129.png" style="max-width:40px"  href="#" @click="backtop">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -81,6 +81,17 @@ export default {
         vm.isLoading = false;
       });
     },
+     backtop(){
+          var timer = setInterval(function(){
+            let osTop = document.documentElement.scrollTop || document.body.scrollTop;
+            let ispeed = Math.floor(-osTop / 5); 
+            document.documentElement.scrollTop = document.body.scrollTop = osTop + ispeed;
+            this.isTop = true;
+            if(osTop === 0){
+              clearInterval(timer);
+            }
+          },10)
+      }
   },
   computed:{
     cart(){

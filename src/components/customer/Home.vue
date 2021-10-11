@@ -116,7 +116,7 @@
                 <div class="row row-center">
                     <div class="card p-3 col-12">
                         <div class="card-wrapper">
-                            <div class="card-img">
+                            <div class="card-img" @click="backtop">
                                 <img src="https://images.unsplash.com/photo-1590845947676-fa2576f401b2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80">
                             </div>
                             <div class="card-box"  v-for="(card,i) in cards" :key=i>
@@ -296,6 +296,20 @@ export default{
       ]
     }
   },
+  methods: {
+      backtop(){
+          var timer = setInterval(function(){
+            let osTop = document.documentElement.scrollTop || document.body.scrollTop;
+            let ispeed = Math.floor(-osTop / 5); 
+            document.documentElement.scrollTop = document.body.scrollTop = osTop + ispeed;
+            this.isTop = true;
+            if(osTop === 0){
+              clearInterval(timer);
+            }
+          },10)
+      }
+    }
+  
 }
 </script>
 
