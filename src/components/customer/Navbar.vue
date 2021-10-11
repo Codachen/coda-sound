@@ -97,8 +97,11 @@ export default {
     cart(){
       return this.$store.state.cart;
     }
-  }
-  
+  },
+  created() {
+      this.getCart();
+      this.$bus.$on('emitGetCart', this.getCart);
+    }
   }
 </script>
 <style scoped>
