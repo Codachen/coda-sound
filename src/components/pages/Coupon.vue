@@ -10,6 +10,7 @@
       <thead>
         <tr>
           <th>名稱</th>
+          <th>優惠碼</th>
           <th>折扣百分比</th>
           <th>是否啟用</th>
           <th>編輯</th>
@@ -18,6 +19,7 @@
       <tbody>
         <tr v-for="(item, key) in coupons" :key="key">
           <td>{{ item.title }}</td>
+          <td>{{ item.code }}</td>
           <td>{{ item.percent }}%</td>
           <td>
             <span v-if="item.is_enabled === 1" class="text-success">啟用</span>
@@ -48,9 +50,9 @@
           </div>
           <div class="modal-body">
             <div class="form-group">
-              <label for="title">標題</label>
+              <label for="title">名稱</label>
               <input type="text" class="form-control" id="title" v-model="tempCoupon.title"
-                placeholder="請輸入標題">
+                placeholder="請輸入名稱">
             </div>
             <div class="form-group">
               <label for="coupon_code">優惠碼</label>
