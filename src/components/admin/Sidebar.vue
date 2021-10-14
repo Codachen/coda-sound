@@ -14,7 +14,7 @@
             <i class="fas fa-box-open"></i>
               產品列表
             </router-link>
-            <router-link class="nav-link" to="/coupon">
+            <router-link class="nav-link" to="/admin/coupon">
             <i class="fas fa-box-open"></i>
               優惠碼
             </router-link>
@@ -28,7 +28,7 @@
         </h6>
         <ul class="nav flex-column mb-2">
           <li class="nav-item">
-            <router-link class="nav-link" to="/customer_order">
+            <router-link class="nav-link" to="/admin/customer_order">
             <i class="fas fa-box-open"></i>
               模擬訂單
             </router-link>

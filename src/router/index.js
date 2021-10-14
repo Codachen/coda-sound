@@ -21,7 +21,7 @@ export default new VueRouter({
     routes:[
         {
             path:'*',
-            redirect:'login',
+            redirect:'/',
         },
         {
             path:'/',
@@ -69,25 +69,18 @@ export default new VueRouter({
             name:'後台',
             path:'/admin',
             component:Dashboard,
+            meta: { requiresAuth: true },
             children:[
                 {
                     path:'products',
                     name:'後台產品',
                     component:Products,
-                    meta: { requiresAuth: true },
                 },
                 {
+                    path:'coupon',
                     name:'優惠碼',
-                    path:'/coupon',
                     component:Coupon
                 },
-            ]
-        },
-        {
-            name:'後台',
-            path:'/',
-            component:Dashboard,
-            children:[
                 {
                     path:'customer_order',
                     name:'模擬訂單',
@@ -95,10 +88,9 @@ export default new VueRouter({
                 },
                 {
                     path:'customer_checkout/:orderId',
-                    name:'送出訂單',
+                    name:'模擬送出訂單',
                     component:CustomerCheckout,
                 },
-                
             ]
         }
     ]
