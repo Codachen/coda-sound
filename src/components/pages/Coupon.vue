@@ -89,14 +89,14 @@
             <div class="modal-content border-0">
             <div class="modal-header bg-danger text-white">
                 <h5 class="modal-title" id="exampleModalLabel">
-                <span>刪除產品</span>
+                <span>刪除優惠券</span>
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                是否刪除 <strong class="text-danger">{{ tempCoupon.title }}</strong> 商品(刪除後將無法恢復)。
+                是否刪除 <strong class="text-danger">{{ tempCoupon.title }}</strong> 優惠券(刪除後將無法恢復)。
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">取消</button>
@@ -153,7 +153,7 @@ export default {
     getCoupons() {
       const vm = this;
       const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/coupons`;
-      this.$http.get(url, vm.tempProduct).then((response) => {
+      this.$http.get(url).then((response) => {
         vm.coupons = response.data.coupons;
         console.log(response);
         vm.isLoading = false;

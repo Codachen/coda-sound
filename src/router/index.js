@@ -14,7 +14,7 @@ import Coupon from '@/components/pages/Coupon';
 import CustomerCheckout from '@/components/pages/CustomerCheckout';
 import Order from '@/components/customer/Order';
 import Checkout from '@/components/customer/Checkout';
-import Welcome from '@/components/customer/Welcome';
+import Home from '@/components/customer/Home';
 Vue.use(VueRouter);
 
 export default new VueRouter({
@@ -26,44 +26,44 @@ export default new VueRouter({
         {
             path:'/',
             name:'主要頁面',
-            component:Welcome,
+            component:Main,
             children:[
                 {
-                    path:'',
-                    name:'主要頁面',
-                    component:Main,
+                    path:'/',
+                    name:'首頁',
+                    component:Home
+                },
+                {
+                    path:'/brand',
+                    name:'品牌故事',
+                    component:Brand
+                },
+                {
+                    path:'/product',
+                    name:'供應商品',
+                    component:Product
+                },
+                {
+                    path:'/location',
+                    name:'交通方式',
+                    component:Location
+                },
+                {
+                    path:'/order',
+                    name:'確認商品頁面',
+                    component:Order
                 },
                 {
                     path:'/checkout/:orderId',
                     name:'顧客送出訂單',
                     component:Checkout, 
-                }
-            ]
-        },
-        {
-            path:'/brand',
-            name:'品牌故事',
-            component:Brand
-        },
-        {
-            path:'/product',
-            name:'供應商品',
-            component:Product
-        },
-        {
-            path:'/location',
-            name:'交通方式',
-            component:Location
+                },
+            ]    
         },
         {
             name:'後台登入',
             path:'/login',
             component:Login
-        },
-        {
-            path:'/order',
-            name:'確認商品頁面',
-            component:Order
         },
         {
             name:'後台',

@@ -1,21 +1,18 @@
 <template>
     <div>
         <Navbar></Navbar>
-        <Home/>
+        <router-view></router-view>
         <Footer></Footer>
     </div>
 </template>
 
 <script>
 import Navbar from './Navbar';
-import Home from './Home';
 import Footer from './Footer';
 export default {
     components:{
         Navbar,
-        Home,
         Footer
-
     }
 }
 </script>
