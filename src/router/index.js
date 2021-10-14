@@ -72,7 +72,7 @@ export default new VueRouter({
             meta: { requiresAuth: true },
             children:[
                 {
-                    path:'products',
+                    path:'/',
                     name:'後台產品',
                     component:Products,
                 },
