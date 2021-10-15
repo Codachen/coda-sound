@@ -1,6 +1,5 @@
 <template>
     <div>
-        <Navbar></Navbar>
         <div class="jumbotron d-flex align-items-end">
         <h1 class="display-4 ml-5">結帳頁面</h1>
       </div>
@@ -127,12 +126,8 @@
 </template>
 
 <script>
-import Navbar from './Navbar';
 import $ from 'jquery';
 export default {
-    components:{
-        Navbar,
-    },
   data(){
     return{
       products:[],

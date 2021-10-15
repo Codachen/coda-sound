@@ -1,7 +1,6 @@
 <template>
     <div>
         <loading :active.sync="isLoading"></loading>
-        <Navbar></Navbar>
          <section class="cid-qz32r7TSo5" id="content7-93" data-rv-view="3316">
     <div class="about">
     <div class="container-fluid">
@@ -136,19 +135,12 @@
         </div>
       </div>
     </div>
-        <Footer></Footer>
-    </div>
+  </div>
 </template>
 
 <script>
 import $ from 'jquery';
-import Navbar from './Navbar';
-import Footer from './Footer';
 export default {
-    components:{
-        Navbar,
-        Footer
-    },
     data(){
         return{
         // products:[],

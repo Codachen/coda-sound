@@ -1,6 +1,5 @@
 <template>
     <div>
-      <Navbar></Navbar>
         <div class="jumbotron d-flex align-items-end">
         <h1 class="display-4 ml-5">感謝您的購買</h1>
       </div>
@@ -58,16 +57,12 @@
       <button class="btn btn-danger">確認付款去</button>
     </div>
   </form>
+ </div>
 </div>
-    </div>
 </template>
 
 <script>
-import Navbar from './Navbar'
 export default {
-  components:{
-    Navbar
-  },
     data(){
         return{
             orderId:'',

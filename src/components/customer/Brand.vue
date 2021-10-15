@@ -1,7 +1,6 @@
 <template>
     <div>
-        <Navbar></Navbar>
-        <section class="cid-qz32r7TSo5" id="content7-93" data-rv-view="3316">
+    <section class="cid-qz32r7TSo5" id="content7-93" data-rv-view="3316">
     <div class="about">
     <div class="container-fluid">
         <div class="row justify-content-center">
@@ -105,18 +104,11 @@
             </div>
         </div>
 <!-- end -->
-      <Footer></Footer>
-    </div>
+  </div>
 </template>
 
 <script>
-import Navbar from './Navbar';
-import Footer from './Footer'
 export default {
-    components:{
-        Navbar,
-        Footer
-    },
     data() {
       return {
         intros:[
