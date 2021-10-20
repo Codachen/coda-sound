@@ -26,7 +26,7 @@ export default {
             this.$http.post(url).then((response)=>{
                 console.log(response.data);
                 if(response.data.success){
-                    vm.$router.push('/signin');
+                    vm.$router.push('/login');
                 }
             })
   }

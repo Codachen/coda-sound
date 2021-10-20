@@ -26,7 +26,7 @@
                                     <label>Password</label>
                                     <input type="password" class="form-control form-control-lg rounded-0" id="pwd1" placeholder="輸入密碼" v-model="user.password" required>
                                 </div>
-                                <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">登入</button>
+                                 <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">登入</button>
                             </form>
                         </div>
                     </div>
@@ -57,7 +57,7 @@ export default {
       this.$http.post(api, vm.user).then(response => {
         console.log(response.data);
         if (response.data.success) {
-          vm.$router.push("/admin/products");
+          vm.$router.push("/admin");
           const token = response.data.token;
           const expired = response.data.expired;
           console.log(token, expired);

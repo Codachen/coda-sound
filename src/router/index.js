@@ -56,7 +56,7 @@ export default new VueRouter({
                 {
                     path:'/checkout/:orderId',
                     name:'顧客送出訂單',
-                    component:Checkout, 
+                    component:Checkout 
                 },
             ]    
         },
@@ -75,6 +75,7 @@ export default new VueRouter({
                     path:'/',
                     name:'後台產品',
                     component:Products,
+                    meta: { requiresAuth: true },
                 },
                 {
                     path:'coupon',
